@@ -1,0 +1,125 @@
+/* -------- GLOBAL -------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202020;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* -------- NAVBAR -------- */
+
+#navbar {
+    margin-bottom: 2rem;
+}
+
+#navbar header {
+    background-color: #FFEE32;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar button {
+    border: none;
+    background-color: transparent;
+    color: #000;
+    font-size: 2rem;
+    padding: 1rem 0 1rem 1rem;
+}
+
+#navbar #navLinks {
+    list-style-type: none;
+    padding-left: 0;
+    background-color: #333533;
+    margin-top: 0;
+}
+
+#navbar li:not(:first-child) {
+    color: #202020;
+    border-top: 0.1rem solid;
+}
+
+/* Hides navbar links by default for small & medium devices */
+.toggle {
+    display: none;
+}
+
+#navbar .nav-link {
+    color: #fff;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+#navbar .nav-link:hover {
+    background-color: #D6D6D6;
+    color: #333533;
+    text-decoration: underline;
+}
+
+/* --------  MAIN SECTION -------- */
+
+.main-section {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+}
+
+.main-section header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* -------- ARTICLE -------- */
+
+article li {
+    margin-bottom: 1rem;
+}
+
+article code {
+    background-color: #D6D6D6;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    display: block;
+    white-space: pre-line;
+}
+
+article a {
+    color: #202020;
+}
+
+
+/* -------- MEDIA QUERIES LARGE DEVICES -------- */
+
+@media only screen and (min-width: 992px) {
+    #navbar {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        min-width: 18.75rem;
+        overflow: auto;
+        margin-bottom: 0;
+    }
+
+    /* Hides menu burger button */
+    #navbar button {
+        display: none;
+    }
+
+    /* Displays navbar links */
+    .toggle {
+        display: block;
+    }
+
+    #navbar #navLinks {
+        margin: 0;
+    }
+
+    #main-doc {
+        margin-left: 18.75rem;
+    }
+}
